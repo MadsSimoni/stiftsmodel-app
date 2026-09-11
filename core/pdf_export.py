@@ -25,7 +25,7 @@ def reportlab_image_preserve_aspect(image_bytes, max_width, max_height):
         image.drawHeight = max_height
     return image
 
-def make_pdf(app_title, scenario_name, ophavstekst, show_display, map_png, changed):
+def make_pdf(app_title, scenario_name, ophavstekst, show_display, map_png, changed, ophavstekst_bund=None):
     if not REPORTLAB_AVAILABLE:
         raise RuntimeError("ReportLab er ikke installeret.")
 
@@ -61,7 +61,7 @@ def make_pdf(app_title, scenario_name, ophavstekst, show_display, map_png, chang
 
     story.append(reportlab_image_preserve_aspect(map_png, max_width=500, max_height=360))
     story.append(Spacer(1, 8))
-    story.append(Paragraph(ophavstekst, styles["Italic"]))
+    story.append(Paragraph(ophavstekst_bund or ophavstekst, styles["Italic"]))
 
     doc.build(story)
     pdf_buffer.seek(0)

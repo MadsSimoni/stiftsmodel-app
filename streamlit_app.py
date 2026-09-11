@@ -5,6 +5,7 @@ from core.config import (
     APP_VERSION,
     APP_TITLE,
     OPHAVSTEKST,
+    OPHAVSTEKSTBUND,
     CURRENT_KBH,
     CURRENT_HEL,
     CURRENT_ROS,
@@ -280,6 +281,7 @@ if REPORTLAB_AVAILABLE:
         show_display,
         map_png,
         changed,
+        ophavstekst_bund=OPHAVSTEKSTBUND,
     )
     st.download_button(
         "Download scenarie som PDF",
@@ -315,5 +317,5 @@ with st.expander("Datakilder og teknisk dokumentation", expanded=False):
         st.info("Der er ikke registreret kildekolonner i det aktive datasæt.")
 
 st.markdown("---")
-st.markdown(f"**{OPHAVSTEKST}**")
+st.markdown(f"**{OPHAVSTEKSTBUND}**")
 st.caption(f"App-version: {APP_VERSION}")

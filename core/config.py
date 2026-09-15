@@ -10,6 +10,14 @@ OPHAVSTEKST = (
     "med angivelse af denne ophavsoplysning."
 )
 
+OPHAVSTEKSTBUND = (
+    "Stiftsbyggeren er udarbejdet af provst Dennis Jelstrup, Falster Provsti, " 
+    "på baggrund af offentligt tilgængelige data. Vi tager forbehold for fejl. " 
+    "Bla. er vi opmærksomme på, at der kan være en vis usikkerhed i tallet for overenskomstansatte præster, " 
+    "som er trukket fra provsti.dk. Det er dog ikke noget, der påvirker det store billede. "
+    "Programmet kan frit anvendes med angivelse af disse oplysninger."
+)
+
 CURRENT_KBH = "Københavns Stift"
 CURRENT_HEL = "Helsingør Stift"
 CURRENT_ROS = "Roskilde Stift"
